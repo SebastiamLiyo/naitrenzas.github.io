@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Curso de Trenzado Box Braids</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --primario-negro: #000;
+      --dorado: #ffd700;
+      --rosa: #ff69b4;
+      --blanco: #fff;
+      --text-light: #f5f5f5;
+      --gris-claro: #2a2a2a;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI',sans-serif; background:var(--primario-negro); color:var(--text-light); }
+    header { background:#111; padding:20px; display:flex; align-items:center; justify-content:space-between; }
+    header img { height:40px; }
+    nav a { margin-left:16px; color:var(--text-light); font-weight:500; text-decoration:none; }
+    .btn-nav { background:var(--rosa); color:var(--blanco); padding:6px 14px; border-radius:20px; }
+    .btn-nav:hover { background:var(--dorado); }
+    .hero { position:relative; text-align:center; padding:80px 20px; background:url('images/hero-bg.jpg') center/cover no-repeat; }
+    .hero::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.6); }
+    .hero-content { position:relative; z-index:1; max-width:600px; margin:auto; }
+    .hero-content h1 { font-size:32px; color:var(--dorado); margin-bottom:16px; }
+    .hero-content p { font-size:18px; margin-bottom:24px; }
+    .btn-cta { background:var(--rosa); color:var(--blanco); padding:12px 28px; border:none; border-radius:12px; font-size:16px; cursor:pointer; }
+    .btn-cta:hover { background:var(--dorado); }
+    .carousel { display:flex; justify-content:center; overflow-x:auto; scroll-snap-type:x mandatory; gap:10px; padding:30px 0; }
+    .carousel img { width:100%; max-width:280px; border-radius:12px; scroll-snap-align:start; }
+    .content { max-width:800px; margin:40px auto; padding:0 20px; }
+    h2.section-title { font-size:24px; color:var(--dorado); margin:24px 0 12px; text-align:center; }
+    ul { list-style-type:square; padding-left:20px; }
+    ul li { font-size:16px; line-height:1.6; margin-bottom:8px; }
+    .info-boxes { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin:40px 20px; }
+    .info-box { background:var(--gris-claro); padding:20px; border-radius:12px; text-align:center; }
+    .info-box h3 { margin-bottom:8px; color:var(--rosa); font-size:18px; }
+    .info-answer { font-size:20px; color:var(--dorado); font-weight:bold; }
+    .whatsapp-logo { width:40px; margin-top:8px; }
+    .testimonios { background:var(--gris-claro); padding:40px 20px; border-radius:12px; margin:40px 20px; text-align:center; }
+    .testimonial-box { display:inline-block; width:260px; vertical-align:top; padding:16px; margin:12px; border-radius:12px; }
+    .testimonial-box.box1 { background:#3a3a3a; }
+    .testimonial-box.box2 { background:#4d4d4d; }
+    .testimonial-box.box3 { background:#666666; }
+    .testimonial-box p { font-size:16px; margin-bottom:8px; color:var(--text-light); }
+    .stars { color:var(--dorado); font-size:16px; }
+    .calendar-section { max-width:360px; margin:40px auto; text-align:center; }
+    .calendar-month { display:grid; grid-template-columns:repeat(7,1fr); gap:6px; background:#111; padding:12px; border-radius:12px; }
+    .calendar-weekday { font-size:12px; color:var(--dorado); text-transform:uppercase; text-align:center; font-weight:bold; }
+    .calendar-day { text-align:center; padding:8px 0; font-size:14px; color:var(--text-light); border-radius:6px; }
+    .calendar-day.empty { background:transparent; }
+    .calendar-day.marked { background:var(--rosa); color:var(--blanco); font-weight:bold; }
+    .cta-wrap { margin-top:20px; text-align:center; }
+    footer { background:#111; text-align:center; padding:20px; font-size:14px; margin-top:40px; }
+    @media(max-width:600px) { nav a { margin-left:8px; font-size:14px; } .hero { padding:60px 10px; } .hero-content h1 { font-size:24px; } }
+  </style>
 </head>
 <body>
-  <header id="main-header">
-    <img src="images/estiloreina-logo.png" alt="Logo Estilo Reina" class="logo" />
-    <nav class="main-nav">
+  <header>
+    <img src="images/estiloreina-logo.png" alt="Logo Estilo Reina">
+    <nav>
       <a href="#course">Inicio</a>
       <a href="#temario">Temario</a>
       <a href="#galeria">Galería</a>
@@ -17,7 +67,6 @@
       <a href="https://wa.link/vqn6h0" class="btn-nav">Inscribirme</a>
     </nav>
   </header>
-
   <section id="course" class="hero">
     <div class="hero-content">
       <h1>¡Tu Puerta al Arte del Trenzado Box Braids!</h1>
@@ -25,14 +74,12 @@
       <button class="btn-cta" onclick="location.href='https://wa.link/vqn6h0'">Quiero Aprender</button>
     </div>
   </section>
-
   <section id="galeria" class="carousel">
-    <img src="images/braids1.jpeg" alt="Box Braids 1" />
-    <img src="images/braids2.jpeg" alt="Box Braids 2" />
-    <img src="images/braids3.jpeg" alt="Box Braids 3" />
-    <img src="images/braids4.jpeg" alt="Box Braids 4" />
+    <img src="images/braids1.jpeg" alt="">
+    <img src="images/braids2.jpeg" alt="">
+    <img src="images/braids3.jpeg" alt="">
+    <img src="images/braids4.jpeg" alt="">
   </section>
-
   <section id="temario" class="content">
     <h2 class="section-title">Descubre lo que aprenderás</h2>
     <ul>
@@ -47,7 +94,6 @@
       <li><strong>Retiro Seguro:</strong> Retira extensiones sin dañar el cabello.</li>
     </ul>
   </section>
-
   <section id="info" class="info-boxes">
     <div class="info-box">
       <h3>NECESITO CONOCIMIENTOS?</h3>
@@ -63,8 +109,7 @@
     </div>
     <div class="info-box">
       <h3>GRUPO DE WHATSAPP</h3>
-      <!-- Placeholder: add whatsapp-logo.png in images/ -->
-      <img src="images/whatsapp-logo.png" alt="WhatsApp Logo" class="whatsapp-logo" />
+      <img src="images/whatsapp-logo.png" alt="WhatsApp Logo" class="whatsapp-logo">
     </div>
     <div class="info-box">
       <h3>Fechas de clases</h3>
@@ -80,76 +125,30 @@
       <p>Seña: $60.000 (no reembolsable)</p>
     </div>
   </section>
-
   <section id="testimonios" class="testimonios">
     <h2 class="section-title">Alumnas Satisfechas</h2>
-    <div class="testimonial-box box1">
-      <p>"Increíble experiencia, aprendí todo paso a paso y ya tengo mis primeras clientes."</p>
-      <div class="stars">★★★★★</div>
-    </div>
-    <div class="testimonial-box box2">
-      <p>"El curso me dio la confianza para emprender, ¡mi negocio va de maravilla!"</p>
-      <div class="stars">★★★★★</div>
-    </div>
-    <div class="testimonial-box box3">
-      <p>"Recomiendo cien por ciento, la salida laboral es real y las técnicas son profesionales."</p>
-      <div class="stars">★★★★★</div>
-    </div>
+    <div class="testimonial-box box1"><p>"Increíble experiencia, aprendí todo paso a paso y ya tengo mis primeras clientes."</p><div class="stars">★★★★★</div></div>
+    <div class="testimonial-box box2"><p>"El curso me dio la confianza para emprender, ¡mi negocio va de maravilla!"</p><div class="stars">★★★★★</div></div>
+    <div class="testimonial-box box3"><p>"Recomiendo cien por ciento, la salida laboral es real y las técnicas son profesionales."</p><div class="stars">★★★★★</div></div>
   </section>
-
   <section id="fechas" class="calendar-section">
     <h2 class="section-title">Próximas Fechas</h2>
     <div class="calendar-month">
-      <div class="calendar-weekday">Lun</div>
-      <div class="calendar-weekday">Mar</div>
-      <div class="calendar-weekday">Mié</div>
-      <div class="calendar-weekday">Jue</div>
-      <div class="calendar-weekday">Vie</div>
-      <div class="calendar-weekday">Sáb</div>
+      <div class="calendar-weekday">Lun</div><div class="calendar-weekday">Mar</div><div class="calendar-weekday">Mié</div>
+      <div class="calendar-weekday">Jue</div><div class="calendar-weekday">Vie</div><div class="calendar-weekday">Sáb</div>
       <div class="calendar-weekday">Dom</div>
-
-      <div class="calendar-day empty"></div>
-      <div class="calendar-day empty"></div>
-      <div class="calendar-day empty"></div>
-      <div class="calendar-day">1</div>
-      <div class="calendar-day">2</div>
-      <div class="calendar-day">3</div>
-      <div class="calendar-day">4</div>
-
-      <div class="calendar-day">5</div>
-      <div class="calendar-day">6</div>
-      <div class="calendar-day">7</div>
-      <div class="calendar-day">8</div>
-      <div class="calendar-day">9</div>
-      <div class="calendar-day marked saturday">10</div>
-      <div class="calendar-day marked sunday">11</div>
-
-      <div class="calendar-day">12</div>
-      <div class="calendar-day">13</div>
-      <div class="calendar-day">14</div>
-      <div class="calendar-day">15</div>
-      <div class="calendar-day">16</div>
-      <div class="calendar-day">17</div>
-      <div class="calendar-day">18</div>
-      <div class="calendar-day">19</div>
-      <div class="calendar-day">20</div>
-      <div class="calendar-day">21</div>
-      <div class="calendar-day">22</div>
-      <div class="calendar-day">23</div>
-      <div class="calendar-day">24</div>
-      <div class="calendar-day">25</div>
-      <div class="calendar-day">26</div>
-      <div class="calendar-day">27</div>
-      <div class="calendar-day">28</div>
-      <div class="calendar-day">29</div>
-      <div class="calendar-day">30</div>
-      <div class="calendar-day">31</div>
+      <div class="calendar-day empty"></div><div class="calendar-day empty"></div><div class="calendar-day empty"></div>
+      <div class="calendar-day">1</div><div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div>
+      <div class="calendar-day">5</div><div class="calendar-day">6</div><div class="calendar-day">7</div><div class="calendar-day">8</div>
+      <div class="calendar-day">9</div><div class="calendar-day marked saturday">10</div><div class="calendar-day marked sunday">11</div>
+      <div class="calendar-day">12</div><div class="calendar-day">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div>
+      <div class="calendar-day">16</div><div class="calendar-day">17</div><div class="calendar-day">18</div><div class="calendar-day">19</div>
+      <div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div><div class="calendar-day">23</div>
+      <div class="calendar-day">24</div><div class="calendar-day">25</div><div class="calendar-day">26</div><div class="calendar-day">27</div>
+      <div class="calendar-day">28</div><div class="calendar-day">29</div><div class="calendar-day">30</div><div class="calendar-day">31</div>
     </div>
-    <div class="cta-wrap">
-      <button class="btn-cta" onclick="location.href='https://wa.link/vqn6h0'">Quiero Aprender</button>
-    </div>
+    <div class="cta-wrap"><button class="btn-cta" onclick="location.href='https://wa.link/vqn6h0'">Quiero Aprender</button></div>
   </section>
-
-  <footer id="main-footer">&copy; 2025 Box Braids Academy. Todos los derechos reservados.</footer>
+  <footer>&copy; 2025 Box Braids Academy. Todos los derechos reservados.</footer>
 </body>
 </html>
