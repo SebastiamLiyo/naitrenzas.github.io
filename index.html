@@ -28,7 +28,14 @@
     .btn-cta { background:var(--rosa); color:var(--blanco); padding:12px 28px; border:none; border-radius:12px; font-size:16px; cursor:pointer; }
     .btn-cta:hover { background:var(--dorado); }
     .carousel { display:flex; justify-content:center; overflow-x:auto; scroll-snap-type:x mandatory; gap:10px; padding:30px 0; }
-    .carousel img { width:100%; max-width:280px; border-radius:12px; scroll-snap-align:start; }
+    .carousel img,
+.carousel video {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 12px;
+  scroll-snap-align: start;
+}
     .content { max-width:800px; margin:40px auto; padding:0 20px; }
     h2.section-title { font-size:24px; color:var(--dorado); margin:24px 0 12px; text-align:center; }
     ul { list-style-type:square; padding-left:20px; }
