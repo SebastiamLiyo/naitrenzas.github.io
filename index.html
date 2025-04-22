@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curso de Trenzado Box Braids</title>
+  <style>
+    :root { --primario-negro: #000; --dorado: #ffd700; --rosa: #ff69b4; --blanco: #fff; --text-light: #f5f5f5; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI',sans-serif; background:var(--primario-negro); color:var(--text-light); }
+    header { background:#111; padding:20px; display:flex; align-items:center; justify-content:space-between; }
+    header img { height:40px; }
+    nav a { margin-left:16px; color:var(--text-light); font-weight:500; }
+    .btn-nav { background:var(--rosa); padding:6px 14px; border-radius:20px; }
+    .btn-nav:hover { background:var(--dorado); }
+    .hero { position:relative; text-align:center; padding:80px 20px; background:url('images/hero-bg.jpg') center/cover no-repeat; }
+    .hero::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.6); }
+    .hero-content { position:relative; z-index:1; max-width:600px; margin:auto; }
+    .hero-content h2 { font-size:32px; color:var(--dorado); margin-bottom:16px; }
+    .hero-content p { font-size:18px; margin-bottom:24px; }
+    .btn-cta { background:var(--rosa); color:var(--blanco); padding:12px 28px; border:none; border-radius:12px; font-size:16px; cursor:pointer; }
+    .btn-cta:hover { background:var(--dorado); }
+    .carousel { display:flex; justify-content:center; overflow-x:auto; scroll-snap-type:x mandatory; gap:10px; padding:30px 0; }
+    .carousel img { width:100%; max-width:280px; border-radius:12px; scroll-snap-align:start; }
+    .content { max-width:800px; margin:40px auto; padding:0 20px; }
+    h2.section-title { font-size:24px; color:var(--dorado); margin-bottom:12px; text-align:center; }
+    ul { list-style-type:square; padding-left:20px; }
+    ul li { font-size:16px; line-height:1.6; margin-bottom:8px; }
+    .testimonios { background:#111; padding:40px 20px; border-radius:12px; margin:40px 20px; }
+    .testimonial { margin-bottom:24px; }
+    .testimonial p { font-size:16px; margin-bottom:6px; }
+    .stars { color:var(--dorado); font-size:16px; }
+    .calendar-section { max-width:360px; margin:40px auto; text-align:center; }
+    .calendar-month { display:grid; grid-template-columns:repeat(7,1fr); gap:6px; background:#111; padding:12px; border-radius:12px; max-width:360px; margin:0 auto; }
+    .calendar-weekday { font-size:12px; color:var(--dorado); text-transform:uppercase; text-align:center; }
+    .calendar-day { text-align:center; padding:8px 0; font-size:14px; color:var(--text-light); border-radius:6px; }
+    .calendar-day.empty { background:transparent; }
+    .calendar-day.marked { background:var(--rosa); color:var(--blanco); font-weight:bold; }
+    .cta-wrap { margin-top:20px; text-align:center; }
+    footer { background:#111; text-align:center; padding:20px; font-size:14px; margin-top:40px; }
+    @media(max-width:600px) { nav a { margin-left:8px; font-size:14px; } .hero { padding:60px 10px; } .hero-content h2 { font-size:24px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/estiloreina-logo.png" alt="Logo Estilo Reina">
+    <nav>
+      <a href="#course">Inicio</a>
+      <a href="#temario">Temario</a>
+      <a href="#galeria">Galería</a>
+      <a href="#fechas" class="btn-nav">Fechas</a>
+      <a href="https://wa.link/vqn6h0" class="btn-nav">Inscribirme</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="course">
+    <div class="hero-content">
+      <h2>¡Tu Puerta al Arte del Trenzado Box Braids!</h2>
+      <p>Descubre nuestra formación inicial, práctica y creativa. Transforma tu pasión en tu profesión.</p>
+      <button class="btn-cta" onclick="location.href='https://wa.link/vqn6h0'">Quiero Aprender</button>
+    </div>
+  </div>
+
+  <div class="carousel" id="galeria">
+    <img src="images/braids1.jpeg" alt="">
+    <img src="images/braids2.jpeg" alt="">
+    <img src="images/braids3.jpeg" alt="">
+    <img src="images/braids4.jpeg" alt="">
+  </div>
+
+  <div class="content" id="temario">
+    <h2 class="section-title">Descubre lo que aprenderás</h2>
+    <ul>
+      <li><strong>Fundamentos Esenciales:</strong> Conoce los materiales clave.</li>
+      <li><strong>Gestión Profesional:</strong> Toma turnos, organiza citas y gestiona cobros.</li>
+      <li><strong>Preparación Maestra:</strong> Prepara el cabello y organiza extensiones.</li>
+      <li><strong>El Arte de la División:</strong> Técnicas precisas para un acabado prolijo.</li>
+      <li><strong>Integración Perfecta:</strong> Colocación natural y segura de extensiones.</li>
+      <li><strong>Técnica y Eficiencia:</strong> Tips de posición de manos y cierre de calidad.</li>
+      <li><strong>Finalización Profesional:</strong> Sellado y corte final personalizado.</li>
+      <li><strong>Cuidado y Mantenimiento:</strong> Recomendaciones de lavado y cuidado.</li>
+      <li><strong>Retiro Seguro:</strong> Retira extensiones sin dañar el cabello.</li>
+    </ul>
+  </div>
+
+  <div class="testimonios" id="testimonios">
+    <h2 class="section-title">Alumnas Satisfechas</h2>
+    <div class="testimonial">
+      <p>"Increíble experiencia, aprendí todo paso a paso y ya tengo mis primeras clientes."</p>
+      <div class="stars">★★★★★</div>
+    </div>
+    <div class="testimonial">
+      <p>"El curso me dio la confianza para emprender, ¡mi negocio va de maravilla!"</p>
+      <div class="stars">★★★★★</div>
+    </div>
+    <div class="testimonial">
+      <p>"Recomiendo cien por ciento, la salida laboral es real y las técnicas son profesionales."</p>
+      <div class="stars">★★★★★</div>
+    </div>
+  </div>
+
+  <section id="fechas" class="calendar-section">
+    <h2 class="section-title">Próximas Fechas</h2>
+    <div class="calendar-month">
+      <div class="calendar-weekday">Lun</div><div class="calendar-weekday">Mar</div>
+      <div class="calendar-weekday">Mié</div><div class="calendar-weekday">Jue</div>
+      <div class="calendar-weekday">Vie</div><div class="calendar-weekday">Sáb</div>
+      <div class="calendar-weekday">Dom</div>
+      <div class="calendar-day empty"></div><div class="calendar-day empty"></div>
+      <div class="calendar-day empty"></div><div class="calendar-day empty"></div>
+      <div class="calendar-day">1</div><div class="calendar-day">2</div>
+      <div class="calendar-day">3</div><div class="calendar-day">4</div>
+      <div class="calendar-day">5</div><div class="calendar-day">6</div>
+      <div class="calendar-day">7</div><div class="calendar-day">8</div>
+      <div class="calendar-day">9</div><div class="calendar-day marked">10</div>
+      <div class="calendar-day marked">11</div><div class="calendar-day">12</div>
+      <div class="calendar-day">13</div><div class="calendar-day">14</div>
+      <div class="calendar-day">15</div><div class="calendar-day">16</div>
+      <div class="calendar-day">17</div><div class="calendar-day">18</div>
+      <div class="calendar-day">19</div><div class="calendar-day">20</div>
+      <div class="calendar-day">21</div><div class="calendar-day">22</div>
+      <div class="calendar-day">23</div><div class="calendar-day">24</div>
+      <div class="calendar-day">25</div><div class="calendar-day">26</div>
+      <div class="calendar-day">27</div><div class="calendar-day">28</div>
+      <div class="calendar-day">29</div><div class="calendar-day">30</div>
+      <div class="calendar-day">31</div>
+    </div>
+    <div class="cta-wrap">
+      <button class="btn-cta" onclick="location.href='https://wa.link/vqn6h0'">Quiero Aprender</button>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Box Braids Academy. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
