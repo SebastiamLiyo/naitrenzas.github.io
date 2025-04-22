@@ -1,50 +1,17 @@
-/* Variables */
-:root { --primario-negro: #000; --dorado: #ffd700; --rosa: #ff69b4; --blanco: #fff; --text-light: #f5f5f5; --gris-claro: #2a2a2a; }
-/* Global */
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Segoe UI',sans-serif; background:var(--primario-negro); color:var(--text-light); }
-/* Header */
-#main-header { background:#111; padding:20px; display:flex; align-items:center; justify-content:space-between; }
-.logo { height:40px; }
-.main-nav a { margin-left:16px; color:var(--text-light); font-weight:500; text-decoration:none; }
-.btn-nav { background:var(--rosa); color:var(--blanco); padding:6px 14px; border-radius:20px; }
-.btn-nav:hover { background:var(--dorado); }
-/* Hero */
-.hero { position:relative; text-align:center; padding:80px 20px; background:url('images/hero-bg.jpg') center/cover no-repeat; }
-.hero::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.6); }
-.hero-content { position:relative; z-index:1; max-width:600px; margin:auto; }
-.hero-content h1 { font-size:32px; color:var(--dorado); margin-bottom:16px; }
-.btn-cta { background:var(--rosa); color:var(--blanco); padding:12px 28px; border:none; border-radius:12px; font-size:16px; cursor:pointer; }
-.btn-cta:hover { background:var(--dorado); }
-/* Carousel */
-.carousel { display:flex; justify-content:center; overflow-x:auto; scroll-snap-type:x mandatory; gap:10px; padding:30px 0; }
-.carousel img { width:100%; max-width:280px; border-radius:12px; scroll-snap-align:start; }
-/* Content */
-.content { max-width:800px; margin:40px auto; padding:0 20px; }
-.section-title { font-size:24px; color:var(--dorado); margin-bottom:12px; text-align:center; }
-.content ul { list-style-type:square; padding-left:20px; }
-.content li { font-size:16px; line-height:1.6; margin-bottom:8px; }
-/* Info Boxes */
-.info-boxes { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin:40px 20px; }
-.info-box { background:var(--gris-claro); padding:20px; border-radius:12px; text-align:center; }
-.info-box h3 { margin-bottom:8px; color:var(--rosa); }
-.info-box p { font-size:14px; line-height:1.4; }
-/* Testimonios */
-.testimonios { background:var(--gris-claro); padding:40px 20px; border-radius:12px; margin:40px 20px; text-align:center; }
-.testimonial-box { display:inline-block; width:260px; vertical-align:top; padding:16px; margin:12px; border-radius:12px; }
-.testimonial-box.box1 { background:#3a3a3a; }
-.testimonial-box.box2 { background:#4d4d4d; }
-.testimonial-box.box3 { background:#666666; }
-.testimonial-box p { font-size:16px; margin-bottom:8px; color:var(--text-light); }
-.stars { color:var(--dorado); font-size:16px; }
-/* Calendario */
-.calendar-section { max-width:360px; margin:40px auto; text-align:center; }
-.calendar-month { display:grid; grid-template-columns:repeat(7,1fr); gap:6px; background:#111; padding:12px; border-radius:12px; }
-.calendar-weekday { font-size:12px; color:var(--dorado); text-transform:uppercase; text-align:center; font-weight:bold; }
-.calendar-day { text-align:center; padding:8px 0; font-size:14px; color:var(--text-light); border-radius:6px; }
-.calendar-day.empty { background:transparent; }
-.calendar-day.marked { background:var(--rosa); color:var(--blanco); font-weight:bold; }
-/* Footer */
-#main-footer { background:#111; text-align:center; padding:20px; font-size:14px; margin-top:40px; }
-/* Responsive */
-@media(max-width:600px){ .main-nav a{margin-left:8px;font-size:14px;} .hero{padding:60px 10px;} .hero-content h1{font-size:24px;} }
+/* Add following to existing styles.css */
+
+/* Info Answer style */
+.info-answer {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 4px;
+  color: var(--dorado);
+}
+
+/* WhatsApp logo styling */
+.whatsapp-logo {
+  width: 40px;
+  margin-top: 8px;
+}
+
+/* Adjust calendar empties (3) and alignment ensured via existing grid styles */
